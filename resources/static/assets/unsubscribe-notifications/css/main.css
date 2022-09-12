@@ -68,8 +68,7 @@ button:-moz-focusring,
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('../fonts/opensans/OpenSans-Light.woff2') format('woff2');
-  /* src: url('/assets/activate_account/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2'); */
+  src: url('/assets/unsubscribe-notifications/fonts/opensans/OpenSans-Light.woff2') format('woff2');
 }
 
 @font-face {
@@ -77,8 +76,7 @@ button:-moz-focusring,
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/opensans/OpenSans-Regular.woff2') format('woff2');
-  /* src: url('/assets/activate_account/fonts/proximanova/ProximaNova-Regular.woff2') format('woff2'); */
+  src: url('/assets/unsubscribe-notifications/fonts/opensans/OpenSans-Regular.woff2') format('woff2');
 }
 
 .button_submit {
@@ -190,7 +188,7 @@ button:-moz-focusring,
 }
 
 .settings_checkbox:checked+label::before {
-  background-image: url("../img/check_icon.svg");
+  background-image: url('/assets/unsubscribe-notifications/img/check_icon.svg');
 }
 
 .settings_radio {
