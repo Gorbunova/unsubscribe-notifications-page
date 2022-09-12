@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${lang}" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>docuForce</title>
+  <!-- <link rel="shortcut icon" th:href="@{/assets/unsubscribe-notifications/favicon.ico}" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="..static/assets/unsubscribe-notifications/favicon.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" th:href="@{/assets/unsubscribe-notifications/css/main.css}"> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="../static/assets/unsubscribe-notifications/css/main.css">
+  <script src="../static/assets/unsubscribe-notifications/js/main.js"></script>
+  <!-- <script th:src="@{/assets/unsubscribe-notifications/js/main.js}"></script> -->
+</head>
+<body>
+  <div class="header">
+    <img src="../static/assets/unsubscribe-notifications/img/logo.svg" class="logo" alt="docuForce">
+    <!-- <img th:src="@{/assets/unsubscribe-notifications/img/logo.svg}" class="logo" alt="docuForce"> -->
+  </div>
+
+  <div class="form">
+    <form id="settings_form" method="post" th:action="" th:object="">
+      <h1 class="form_title" th:utext="#{label.form.header.notification.settings}">Notification settings</h1>
+
+      <div class="settings_wrapper">
+        <div class="settings_element">
+          <input id="notify_by_email" class="settings_checkbox" type="checkbox" name="isNotifyByEmail"/>
+          <label for="notify_by_email" th:utext="#{label.form.notify.by.email}">Notifications about incoming tasks and messages</label>
+        </div>
+
+        <div class="settings_element">
+          <input id="flow_change_notify" class="settings_checkbox" type="checkbox"/>
+          <label for="flow_change_notify" th:utext="#{label.form.notify.additional}">Additional Notify</label>
+
+          <div class="settings_subelements">
+            <div class="settings_subelement">
+              <input id="any_changes" class="settings_radio" type="radio"/>
+              <label for="any_changes" th:utext="#{label.form.notify.additional.any}">About any process changes</label>
+            </div>
+
+            <div class="settings_subelement">
+              <input id="completion" class="settings_radio" type="radio"/>
+              <label for="completion" th:utext="#{label.form.notify.additional.completion}">Completion only</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings_element">
+          <input id="daily_notify" class="settings_checkbox" type="checkbox" name="isDailyNotificationUnreadTask"/>
+          <label for="daily_notify" th:utext="#{label.form.notify.daily}">Daily reminder of unread tasks for documents</label>
+        </div>
+      </div>
+
+      <div class="buttons_wrapper">
+        <button type="submit" class="button_submit" th:utext="#{label.form.notify.save}">Save</button>
+        <button onclick="submitWithDisabledFields()" type="submit" class="button_submit all_notify" th:utext="#{label.form.notify.unsubscribe}">
+          Unsubscribe from all notifications
+        </button>
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
