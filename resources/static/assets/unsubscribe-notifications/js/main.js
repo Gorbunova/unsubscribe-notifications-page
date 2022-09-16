@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+  setAdditionalSettings(document.querySelector('#flow_change_notify').checked)
   document.querySelector('#notify_by_email').addEventListener('change', (e) => setMainSettings(e.target.checked))
   document.querySelector('#flow_change_notify').addEventListener('change', (e) => setAdditionalSettings(e.target.checked))
 })
